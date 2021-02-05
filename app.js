@@ -1,9 +1,10 @@
 const express = require('express');
 const serveIndex = require('serve-index');
-const serceIndex = require('serve-index');
+const compresion = require('compression');
 
 const app = express();
 
+app.use(compresion());
 app.use(
     "/ftp",
     express.static('public'),
